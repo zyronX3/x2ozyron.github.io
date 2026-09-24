@@ -111,6 +111,16 @@ footer{text-align:center;color:#596784;font-size:11px;margin-top:25px;letter-spa
 .close{position:fixed;right:24px;top:20px;width:45px;height:45px;border:1px solid #3c4f8c;border-radius:13px;background:#0b1230;color:white;font-size:24px;cursor:pointer}
 .close:hover{background:#18245a}
 
+
+.abilities-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ability-card{position:relative;overflow:hidden;min-height:220px;padding:26px;border:1px solid rgba(255,255,255,.08);border-radius:22px;background:linear-gradient(145deg,rgba(20,25,45,.96),rgba(9,12,24,.96));box-shadow:0 16px 40px rgba(0,0,0,.22);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.ability-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 90% 0%,rgba(126,92,255,.16),transparent 38%);pointer-events:none}
+.ability-card:hover{transform:translateY(-6px);border-color:rgba(142,104,255,.45);box-shadow:0 22px 55px rgba(0,0,0,.34)}
+.ability-card.featured{border-color:rgba(126,92,255,.34);background:linear-gradient(145deg,rgba(34,25,65,.98),rgba(10,13,27,.98))}
+.ability-icon{position:relative;display:flex;align-items:center;justify-content:center;width:46px;height:46px;margin-bottom:22px;border-radius:14px;background:linear-gradient(135deg,#7d5cff,#4c7dff);color:#fff;font-size:20px;font-weight:900;box-shadow:0 8px 24px rgba(99,86,255,.3)}
+.ability-label{position:relative;margin-bottom:6px;color:#8e86a8;font-size:11px;font-weight:800;letter-spacing:.18em}
+.ability-card h4{position:relative;margin:0 0 10px;font-size:20px;line-height:1.15}
+.ability-card p{position:relative;margin:0;color:#aaa8b9;line-height:1.65;font-size:14px}
 @media(max-width:900px){
  nav ul{display:none}
  .hero{grid-template-columns:1fr;text-align:center;padding:55px 28px;gap:38px}
@@ -206,15 +216,31 @@ footer{text-align:center;color:#596784;font-size:11px;margin-top:25px;letter-spa
     <div><div class="kicker">02 / UI Expertise</div><h3>What I can build</h3></div>
     <div class="section-note">Clear English labels make the portfolio easy for developers and studio owners to scan.</div>
   </div>
-  <div class="card table-wrap">
-    <table>
-      <thead><tr><th>UI Style</th><th>What I can create</th><th>Best for</th></tr></thead>
-      <tbody>
-        <tr><td><span class="tag purple">STUDDED UI</span></td><td>Stylized, detailed interfaces with strong borders, highlights, depth and game-like visual polish.</td><td><small>Competitive / stylized Roblox games</small></td></tr>
-        <tr><td><span class="tag blue">NORMAL UI</span></td><td>Clean, modern interfaces with readable spacing, simple hierarchy and professional layouts.</td><td><small>Menus, inventory, shops &amp; systems</small></td></tr>
-        <tr><td><span class="tag green">CUSTOM GUI</span></td><td>Custom layouts tailored to the game's theme, screen size and player flow.</td><td><small>Game-specific interfaces</small></td></tr>
-      </tbody>
-    </table>
+  <div class="abilities-grid">
+    <article class="ability-card featured">
+      <div class="ability-icon">✦</div>
+      <div>
+        <div class="ability-label">01</div>
+        <h4>Polished UI</h4>
+        <p>Clean, polished and game-ready interfaces with strong spacing, hierarchy and visual detail.</p>
+      </div>
+    </article>
+    <article class="ability-card">
+      <div class="ability-icon">◆</div>
+      <div>
+        <div class="ability-label">02</div>
+        <h4>Studded UI for Simulator Games</h4>
+        <p>Bold, detailed Studded UI built for simulator games, with depth, highlights and satisfying game-style visuals.</p>
+      </div>
+    </article>
+    <article class="ability-card">
+      <div class="ability-icon">◈</div>
+      <div>
+        <div class="ability-label">03</div>
+        <h4>Custom Game Interfaces</h4>
+        <p>Custom shop, inventory, menu and system interfaces designed around the game's theme and player experience.</p>
+      </div>
+    </article>
   </div>
 </section>
 
